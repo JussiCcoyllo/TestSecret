@@ -22,5 +22,9 @@ public class Secret {
        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path.toFile()))){
            bufferedWriter.write("The wolf is in the pig pen. I repeat: the wolf is in the pig pen.");
        }
+       catch (IOException ioException) {
+           ioException.printStackTrace();
+       }
    }
+
 }
